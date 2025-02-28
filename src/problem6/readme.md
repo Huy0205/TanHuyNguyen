@@ -17,7 +17,18 @@ This module handles the scoreboard system for a website. It updates and retrieve
 **Description:** Returns the top 10 users with the highest scores.  
 **Response:**
 ```json
-{ "scores": [ { "username": "user1", "score": 1500 }, { "username": "user2", "score": 1400 } ] }
+{
+   "scores": [
+      {
+         "username": "user1",
+         "score": 1500
+      },
+      {
+         "username": "user2",
+         "score": 1400
+      }
+   ]
+}
 ```
 #### **Update User Score**
 
@@ -25,11 +36,16 @@ This module handles the scoreboard system for a website. It updates and retrieve
 **Description:** Updates a user's score when they complete an action.  
 **Request Body:**
 ```json
-{ "userId": "12345", "score": 100 }
+{
+   "userId": "12345",
+   "score": 100
+}
 ```
 **Response:**
 ```json
-{ "message": "Score updated successfully" }
+{
+   "message": "Score updated successfully"
+}
 ```
 ##  **Real-time**
 -   The system supports **instant score updates** via **WebSocket** or **Server-Sent Events (SSE)**. If WebSocket is used, clients can maintain a persistent connection to receive live updates without polling.
